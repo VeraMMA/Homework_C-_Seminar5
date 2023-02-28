@@ -2,15 +2,18 @@
 namespace homework
 {
     class Program
-    {
-        static void Main()
+    {      static void Print (string word)
         {
-            int[] Segment = new int [10];
-
+            System.Console.WriteLine(word);
+        }
+        static void Main()
+        {   Print("Найти разницу между максимальным и минимальным элементов массива");
+            Double[] Segment = new Double [10];
+              int i = 0;
             Random rand = new Random();
-            for (int i = 0; i < Segment.Length; i++)
+            for ( i = 0; i < Segment.Length; i++)
             {
-                Segment [i] = rand.Next(1, 99);
+                Segment [i] = Math.Round(rand.NextDouble()*100, 2);
                System.Console.WriteLine($"Заполнение массива {i}\t" + Segment[i]);
                 
             }

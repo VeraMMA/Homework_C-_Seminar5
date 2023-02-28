@@ -1,22 +1,20 @@
-﻿// Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами. 
-//Напишите программу, которая покажет количество чётных чисел в массиве.
-//[345, 897, 568, 234] -> 2
-using System.Linq;
+﻿using System.Linq;
 namespace homework
 {
     class Program
-    {
-        static void Main()
+    {   static void Print (string word)
         {
-            int[] Segment = { 456, 897, 434, 254, 980, 531, 199 };
-
+            System.Console.WriteLine(word);
+        }
+        static void Main()
+        {   Print("Показать количество чётных чисел в массиве:");
+            int[] Segment = new int [10];
+            Random rand = new Random();
             int evenNumbersCount = 0;
 
-            System.Console.WriteLine("Максимальный элемент массива:\t" + Segment.Max());
-            System.Console.WriteLine("Минимальный элемент масссива:\t" + Segment.Min());
-
             for (int i = 0; i < Segment.Length; i++)
-            {
+            { Segment [i] = rand.Next(100, 999);
+             
                 if (Segment[i] % 2 == 0)
                 {  System.Console.WriteLine("Четные элементы массива:\t" + Segment[i]);
                     evenNumbersCount++;
